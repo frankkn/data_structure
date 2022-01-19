@@ -74,7 +74,7 @@ int main()
   printf("\nPreorder: ");
   Preorder(root);
   printf("\nInorder: ");
-  Postorder(root);
+  Inorder(root);
   printf("\nPostorder: ");
   Postorder(root);
 
