@@ -2,6 +2,7 @@
 #include <vector>
 #include <set>
 #include <ctime>
+#include <iomanip>
 
 class Node
 {
@@ -230,45 +231,64 @@ public:
     return 0;
   }
 
-  void InOrder (std::vector<std::vector<uint64_t>>& in_order) const
+  void InOrder (std::vector<uint64_t>& in_order, std::vector<uint64_t>& left_subtree_size) const
   {
-    InOrder(in_order, root_);
+    InOrder(in_order, left_subtree_size, root_);
     return;
   }
 
   friend std::ostream& operator<< (std::ostream& out, BST const& bst)
   {
-    std::vector<std::vector<uint64_t>> in_order;
-    bst.InOrder(in_order);
-    out << "In-order:\n";
-    for (auto const& sequence : in_order)
+    std::vector<uint64_t> in_order;
+    std::vector<uint64_t> left_subtree_size;
+    bst.InOrder(in_order, left_subtree_size);
+    out << "In-order sequence:" << std::setw(1) ;
+    for (auto const& key : in_order)
     {
-      for (auto const& element : sequence)
-      {
-        out << element << " ";
-      }
-      //out << "\n";
+        out << std::setw(2) << key << " ";
+    }
+    out << "\n";
+    out << "Left subtree size:";
+    for (auto const& x : left_subtree_size)
+    {
+        out << std::setw(2) << x << " ";
     }
     out << "\n";
     return out;
   }
 
-private:
+  bool isValidBST(Node* root)
+  {
+    return isValidBST(root, 0 , UINT64_MAX);
+  }
+
+  bool isValidBST(Node* root, uint64_t min_val, uint64_t max_val)
+  {
+    if(!root) { return true; };
+    if(root->key_ <= min_val || root->key_ >= max_val)
+    {
+     return false; 
+    }
+    return isValidBST(root->left_, min_val, root->key_) && isValidBST(root->right_, root->key_, max_val);
+  }
+
+//private:
   Node* root_;
 
-  void InOrder (std::vector<std::vector<uint64_t>>& in_order, Node* node) const
+  void InOrder (std::vector<uint64_t>& in_order, std::vector<uint64_t>& left_subtree_size, Node* node) const
   {
     if (node)
     {
-      InOrder(in_order, node->left_);
-      in_order.push_back({node->key_, node->left_subtree_size_});
-      InOrder(in_order, node->right_);
+      InOrder(in_order, left_subtree_size, node->left_);
+      //in_order.push_back({node->key_, node->left_subtree_size_});
+      in_order.push_back(node->key_);
+      left_subtree_size.push_back(node->left_subtree_size_);
+      InOrder(in_order, left_subtree_size, node->right_);
     }
     return;
   }
-
-
 };
+
 
 int main (int argc, char** argv)
 {
@@ -278,16 +298,15 @@ int main (int argc, char** argv)
   std::vector<uint64_t> nodes;
   for(int i = 0; i < 10; ++i)
   {
-    uint64_t random_number =  rand() % 100 + 1;
+    uint64_t random_number =  rand() % 89 + 10;
     nodes.push_back(random_number);
   }
   for(auto const& node: nodes)
   {
     bst.Insert(node);
-    //std::cout<< x <<std::endl;
   }
-  
-  std::cout<<bst;
+  std::cout << bst;
+  std::cout << "This BST is valid or not: " << bst.isValidBST(bst.root_);
 
   return 0;  
 }
