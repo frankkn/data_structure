@@ -29,6 +29,9 @@ class SuffixTrie(object):
     return node is not None and '$' in node
 
 if __name__ == '__main__':
-  suffix_trie = SuffixTrie("banana")
-  x = suffix_trie.followPath("ana")
-  print(x)
+  strie = SuffixTrie('there would have been a time for such a word')
+  print(strie.hasSubstring('nope')) # output: False
+  print(strie.hasSubstring('would have been')) # output: True
+  print(strie.hasSubstring('such a word')) # output: True
+  print(strie.hasSuffix('would have been')) # output: False
+  print(strie.hasSuffix('such a word')) # output: True
