@@ -27,3 +27,8 @@ class SuffixTrie(object):
     """ Return true iff s is a suffix of t. """
     node = self.followPath(s)
     return node is not None and '$' in node
+
+if __name__ == '__main__':
+  suffix_trie = SuffixTrie("banana")
+  x = suffix_trie.followPath("ana")
+  print(x)
