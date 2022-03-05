@@ -8,11 +8,16 @@ It is required to support operations of 3 type:
 ```
 Search(A, key)
 ```
-return 1 if key is in ; otherwise, return 0
+● return 1 if key is in ; otherwise, return 0
+```
 Predecessor(A, key)
-return the largest integer being smaller than key in  if such integer exists; otherwise, return 0
+```
+● return the largest integer being smaller than key in  if such integer exists; otherwise, return 0
+```
 Successor(A, key)
-return the smallest integer being larger than key in  if such integer exists; otherwise, return 0
+```
+● return the smallest integer being larger than key in  if such integer exists; otherwise, return 0
+
 There will be  queries of either type.
 
 Each query is an ordered pair of integers: (operation id, key).
@@ -21,14 +26,16 @@ The operation ids for search, predecessor, and successor are 1, 2, and 3 respect
 
 Please try your best to respond these queries correctly and efficiently.
 
-Input Format
+**Input Format**
 
-1st line: 
-2nd line:  ( are seperated by single space)
-3rd line: 
-4th ~ (m+3)th lines: queries
-Constraints
+● 1st line: 
+● 2nd line:  ( are seperated by single space)
+● 3rd line: 
+● 4th ~ (m+3)th lines: queries
 
+**Constraints**
+
+● 1 \leq n \leq 2 \ast $10^5$
  key 
 Output Format
 
