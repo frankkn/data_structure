@@ -28,8 +28,8 @@ Please try your best to respond these queries correctly and efficiently.
 
 **Input Format**
 
-● 1st line: 
-● 2nd line:  ( are seperated by single space)
+● 1st line: n
+● 2nd line: A( A~i~are seperated by single space)
 ● 3rd line: 
 ● 4th ~ (m+3)th lines: queries
 
