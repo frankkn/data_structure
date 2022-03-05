@@ -25,3 +25,13 @@ Each query is an ordered pair of integers: (operation id, key).
 The operation ids for search, predecessor, and successor are 1, 2, and 3 respectively.
 
 Please try your best to respond these queries correctly and efficiently.
+
+<img src="https://github.com/frankkn/data_structure/blob/master/HackerRank/110_spring_ids_lab_feb_21/images/problem_description.jpg" width="1000" height="800" alt="E"/><br/>
+
+### Sample
+
+<img src="https://github.com/frankkn/data_structure/blob/master/HackerRank/110_spring_ids_lab_feb_21/images/sample.jpg" width="1000" height="800" alt="E"/><br/>
+
+### Explanation
+
+<img src="https://github.com/frankkn/data_structure/blob/master/HackerRank/110_spring_ids_lab_feb_21/images/explanation.jpg" width="1000" height="800" alt="E"/><br/>
