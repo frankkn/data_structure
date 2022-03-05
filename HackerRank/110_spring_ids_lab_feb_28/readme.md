@@ -4,8 +4,8 @@
 
 ### Problem Description
 
-<img src="https://github.com/frankkn/data_structure/blob/master/HackerRank/110_spring_ids_lab_feb_28/images/problem_description.jpg" width="600" height="800" alt="E"/><br/>
+<img src="https://github.com/frankkn/data_structure/blob/master/HackerRank/110_spring_ids_lab_feb_28/images/problem_description.jpg" width="800" height="800" alt="E"/><br/>
 
 ### Sample
 
-<img src="https://github.com/frankkn/data_structure/blob/master/HackerRank/110_spring_ids_lab_feb_28/images/sample.jpg" width="600" height="800" alt="E"/><br/>
+<img src="https://github.com/frankkn/data_structure/blob/master/HackerRank/110_spring_ids_lab_feb_28/images/sample.jpg" width="800" height="800" alt="E"/><br/>
