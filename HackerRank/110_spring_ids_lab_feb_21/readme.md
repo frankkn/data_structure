@@ -34,4 +34,4 @@ Please try your best to respond these queries correctly and efficiently.
 
 ### Explanation
 
-<img src="https://github.com/frankkn/data_structure/blob/master/HackerRank/110_spring_ids_lab_feb_21/images/explanation.jpg" width="1000" height="800" alt="E"/><br/>
+<img src="https://github.com/frankkn/data_structure/blob/master/HackerRank/110_spring_ids_lab_feb_21/images/explanation.jpg" width="600" height="800" alt="E"/><br/>
