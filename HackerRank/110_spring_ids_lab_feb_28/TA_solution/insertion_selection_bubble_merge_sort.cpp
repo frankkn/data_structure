@@ -57,6 +57,20 @@ void MergeSort (Iterator begin, Iterator end, Iterator buffer_begin, Iterator bu
   return;
 }
 
+template <typename Iterator>
+void MergeSort (Iterator begin, Iterator end)
+{
+  auto size {std::distance(begin, end)};
+  if (size > 1)
+  {
+    auto middle {std::next(begin, size / 2)};
+    MergeSort(begin, middle);
+    MergeSort(middle, end);
+    std::inplace_merge(begin, middle, end);
+  }
+  return;
+}
+
 /*
 * author: redleaf
 * email: redleaf23477@gapp.nthu.edu.tw
