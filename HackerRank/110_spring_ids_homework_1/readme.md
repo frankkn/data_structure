@@ -1,5 +1,4 @@
-# [110_spring_ids_lab] 
-(https://www.hackerrank.com/contests/110-spring-ids-homework-1/challenges)
+# [110_spring_ids_lab] (https://www.hackerrank.com/contests/110-spring-ids-homework-1/challenges)
 
 1. Yet Another Inversion Problem
 https://www.hackerrank.com/contests/110-spring-ids-homework-1/challenges/yet-another-inversion-problem
